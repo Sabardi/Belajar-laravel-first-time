@@ -67,3 +67,17 @@ Route::get('/buku/{b}', function($b){
 Route::get('/buku/{c}', function($c){
     return "buku ke-$c";
 });
+
+// mengirim data ke view
+Route::get('/mahasiswa', function () {
+    // cara pertama
+    // return view('universitas.mahasiswa', ["mahasiswa" => "Sabardi"]);
+    // cara kedua
+    return view('universitas.mahasiswa', 
+    [
+        "mahasiswa01" => "sabardi",
+        "mahasiswa02" => "bambang",
+        "mahasiswa03" => "ilham",
+        "mahasiswa04" => "burhan"
+    ]);
+});

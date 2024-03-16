@@ -73,11 +73,19 @@ Route::get('/mahasiswa', function () {
     // cara pertama
     // return view('universitas.mahasiswa', ["mahasiswa" => "Sabardi"]);
     // cara kedua
-    return view('universitas.mahasiswa', 
-    [
-        "mahasiswa01" => "sabardi",
-        "mahasiswa02" => "bambang",
-        "mahasiswa03" => "ilham",
-        "mahasiswa04" => "burhan"
-    ]);
+    // return view('universitas.mahasiswa', 
+    // [
+    //     "mahasiswa01" => "sabardi",
+    //     "mahasiswa02" => "bambang",
+    //     "mahasiswa03" => "ilham",
+    //     "mahasiswa04" => "burhan"
+    // ]);
+
+    $arraymahasiswa = [
+        "sabardi",
+        "bambang",
+        "ilham",
+        "burhan"
+    ];
+    return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
 });

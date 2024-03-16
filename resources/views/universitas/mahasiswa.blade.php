@@ -13,11 +13,11 @@
         <br>
         <h6>Daftar Mahasiswa</h6>
         <ol>
-            <li><?= $mahasiswa01 ?></li>
-            <li><?= $mahasiswa02 ?></li>
-            <li><?= $mahasiswa03 ?></li>
-            <li><?= $mahasiswa04 ?></li>
-            <li>Rudi Permana</li>
+            <li><?= $mahasiswa[0] ?></li>
+            <li><?= $mahasiswa[1] ?></li>
+            <li><?= $mahasiswa[2] ?></li>
+            <li><?= $mahasiswa[3] ?></li>
+            <li>Rudi Permana</l>
             <li>Sari Citra Lestari</li>
             <li>Rina kue</li>
             <li>Rudi Permana</li>

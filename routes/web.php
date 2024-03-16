@@ -119,3 +119,12 @@ Route::get('/tugasku', function(){
     return view('tugas.tugas2', ["mahasiswa" => $arraymahasiswa]);
 
 });
+
+// kondisi if else
+
+Route::get('/percabangan', function(){
+    $nama = "sabardi";
+    $nilai = 10;
+
+    return view('percabangan.index', compact('nama','nilai'));
+});

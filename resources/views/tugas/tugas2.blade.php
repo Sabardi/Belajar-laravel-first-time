@@ -17,7 +17,7 @@
         ?>
 
 </ol>
-{{ $nama }}
+{{ date(now()) }}
     <div>
         Copyright © <?php echo date("Y"); ?> Duniailkom
     </div>

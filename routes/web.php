@@ -71,6 +71,7 @@ Route::get('/buku/{c}', function($c){
 // mengirim data ke view
 Route::get('/mahasiswa', function () {
     // cara pertama
+    // di view nya di tambahin $arraymahasiswa pada li nya 
     // return view('universitas.mahasiswa', ["mahasiswa" => "Sabardi"]);
     // cara kedua
     // return view('universitas.mahasiswa', 
@@ -80,12 +81,12 @@ Route::get('/mahasiswa', function () {
     //     "mahasiswa03" => "ilham",
     //     "mahasiswa04" => "burhan"
     // ]);
-
-    $arraymahasiswa = [
-        "sabardi",
-        "bambang",
-        "ilham",
-        "burhan"
-    ];
-    return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
+    // di view nya di panggil variable $mahasiswa [] dan index nya
+    // $arraymahasiswa = [
+    //     "sabardi",
+    //     "bambang",
+    //     "ilham",
+    //     "burhan"
+    // ];
+    // return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
 });

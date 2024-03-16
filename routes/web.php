@@ -89,4 +89,11 @@ Route::get('/mahasiswa', function () {
     //     "burhan"
     // ];
     // return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
+
+    // opsi ke tiga 
+    // menambahkan  ->width
+    return view('universitas.mahasiswa')->with('mahasiswa01', 'Risa Lestari')->with('mahasiswa02', 'Rudi Hermawan')
+    ->with('mahasiswa03', 'Bambang Kusumo');
 });
+
+// Mengenal Function compact()

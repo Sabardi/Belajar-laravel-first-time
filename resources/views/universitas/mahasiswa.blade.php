@@ -13,10 +13,9 @@
         <br>
         <h6>Daftar Mahasiswa</h6>
         <ol>
-            <li><?= $mahasiswa[0] ?></li>
-            <li><?= $mahasiswa[1] ?></li>
-            <li><?= $mahasiswa[2] ?></li>
-            <li><?= $mahasiswa[3] ?></li>
+            <li><?= $mahasiswa01 ?></li>
+            <li><?= $mahasiswa02 ?></li>
+            <li><?= $mahasiswa03 ?></li>
             <li>Rudi Permana</l>
             <li>Sari Citra Lestari</li>
             <li>Rina kue</li>

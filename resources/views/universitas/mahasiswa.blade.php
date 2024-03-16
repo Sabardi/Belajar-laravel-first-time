@@ -16,6 +16,7 @@
             <li><?= $mahasiswa01 ?></li>
             <li><?= $mahasiswa02 ?></li>
             <li><?= $mahasiswa03 ?></li>
+            <li><?= $mahasiswa04 ?></li>
             <li>Rudi Permana</l>
             <li>Sari Citra Lestari</li>
             <li>Rina kue</li>

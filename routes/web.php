@@ -97,3 +97,11 @@ Route::get('/mahasiswa', function () {
 });
 
 // Mengenal Function compact()
+Route::get('siswa', function(){
+    $mahasiswa01 = "bardi";
+    $mahasiswa02 = "asep";
+    $mahasiswa03 = "burhan";
+    $mahasiswa04 = "ilham";
+    
+    return view('universitas.mahasiswa', compact("mahasiswa01", "mahasiswa02", "mahasiswa03", "mahasiswa04"));
+});

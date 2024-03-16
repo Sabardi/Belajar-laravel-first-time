@@ -105,3 +105,10 @@ Route::get('siswa', function(){
     
     return view('universitas.mahasiswa', compact("mahasiswa01", "mahasiswa02", "mahasiswa03", "mahasiswa04"));
 });
+
+Route::get('/tugas/{nama}/{umur}/{kotaAsal}', function($nama, $umur, $kotaAsal){
+    return view('tugas.tugas')
+    ->with('nama',$nama)
+    ->with('umur', $umur)
+    ->with('kotaAsal', $kotaAsal);
+});

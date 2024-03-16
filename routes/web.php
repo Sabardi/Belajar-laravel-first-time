@@ -112,3 +112,10 @@ Route::get('/tugas/{nama}/{umur}/{kotaAsal}', function($nama, $umur, $kotaAsal){
     ->with('umur', $umur)
     ->with('kotaAsal', $kotaAsal);
 });
+
+Route::get('/tugasku', function(){
+        $arraymahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
+        "Lisa Permata"];
+    return view('tugas.tugas2', ["mahasiswa" => $arraymahasiswa]);
+
+});

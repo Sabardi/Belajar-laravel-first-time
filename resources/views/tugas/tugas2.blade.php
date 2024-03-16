@@ -15,7 +15,9 @@
             echo "<li> $nama</li>";
         }
         ?>
-    </ol>
+
+</ol>
+{{ $nama }}
     <div>
         Copyright © <?php echo date("Y"); ?> Duniailkom
     </div>

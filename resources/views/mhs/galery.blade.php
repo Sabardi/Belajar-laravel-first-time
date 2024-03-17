@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
 </head>
-<body>
+<body> -->
     <!-- mengirim data pada include -->
-@include('layout.navbar')
+<!-- @include('layout.navbar') -->
+@extends('layout.master')
+@section('title','Galery')
+@section('menuGalery', 'active')
+
+@section('content')
 
     <div class="container text-center mt-3 p-4 bg-white">
         <h1 class="mb-3">Galery</h1>
@@ -35,7 +40,8 @@
             </div>
         </div>
     </div>
-    @include('layout.footer')
+    <!-- @include('layout.footer') -->
 
-</body>
-</html>
+@endsection 
+<!-- </body>
+</html> -->

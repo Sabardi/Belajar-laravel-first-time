@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,13 @@
     <link rel="shortcut icon" href="/img/a.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
-<body>
-@include('layout.navbar')
+<body> -->
+@extends('layout.master')
+@section('title','Data Mahasiswa')
+@section('menuMahasiswa', 'active')
+
+@section('content')
+
     <div class="container text-center mt-3 p-4 bg-white">
         <h1 class="mb-3">Data Mahasiswa</h1>
         <div class="row">
@@ -23,6 +28,7 @@
             </div>
         </div>
     </div>
-@include('layout.footer')
+@endsection
+<!-- @include('layout.footer') -->
 </body>
 </html>

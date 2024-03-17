@@ -134,17 +134,17 @@ Route::get('/mhs', function(){
     $arraymahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
         "Lisa Permata"];
         return view('mhs.mhs')->with('mahsiswa', $arraymahasiswa);
-});
+})->name('Mahasiswa');
 
 Route::get('/dosen', function(){
     $arrDosen = ["Maya Fitrianti, M.M.","Prof. Silvia Nst, M.Farm.",
         "Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
         return view('mhs.dosen')->with('dosen', $arrDosen);
-});
+})->name('Dosen');
 
 Route::get('/galery', function () {
     return view('mhs.galery');
-});
+})->name('gambar');
 
 Route::get('/admin', function(){
     return view('admin');

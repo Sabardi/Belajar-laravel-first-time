@@ -15,10 +15,10 @@
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link @yield('menuMahasiswa')"  href="{{route('Mahasiswa')}}">Data Mahasiswa</a>
+                    <a class="nav-link @yield('menuMahasiswa')"  href="/mhs">Data Mahasiswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @yield('menuDosen')" href="{{route('Dosen')}}">Data Dosen</a>
+                    <a class="nav-link @yield('menuDosen')" href="/dosen">Data Dosen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @yield('menuGalery')" href="{{route('gambar')}}">Galery</a>

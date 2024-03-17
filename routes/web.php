@@ -145,3 +145,7 @@ Route::get('/dosen', function(){
 Route::get('/galery', function () {
     return view('mhs.galery');
 });
+
+Route::get('/admin', function(){
+    return view('admin');
+});

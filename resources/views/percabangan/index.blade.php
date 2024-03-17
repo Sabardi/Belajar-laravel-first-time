@@ -6,12 +6,20 @@
 <br>
 
 <div class="alert alert-secondary d-inline-block">
-<?php    
-if (($nilai >= 0) and ($nilai< 50)){
-    echo "maaf anda tidak lulus";
-}else if (($nilai >= 50) and ($nilai <= 100) ){
-    echo "Selamat, anda lulus";
-}
+<!-- < ? php    
+    if (($nilai >= 0) and ($nilai< 50)){
+         echo "maaf anda tidak lulus";
+    }else if (($nilai >= 50) and ($nilai <= 100) ){
+         echo "Selamat, anda lulus";
+    }
 
-    ?>
+    ? > -->
+    <!-- menggunakan bahasa blade  -->
+    @if (($nilai >= 0) and ($nilai<50))
+        
+        Maaf, anda tidak lulus
+
+        @elseif (($nilai >= 50) and ($nilai<100))
+        selamat anda lulus
+    @endif
 </div>

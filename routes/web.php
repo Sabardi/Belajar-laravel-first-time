@@ -128,3 +128,20 @@ Route::get('/percabangan', function(){
 
     return view('percabangan.index', compact('nama','nilai'));
 });
+
+// Layoute
+Route::get('/mhs', function(){
+    $arraymahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
+        "Lisa Permata"];
+        return view('mhs.mhs')->with('mahsiswa', $arraymahasiswa);
+});
+
+Route::get('/dosen', function(){
+    $arrDosen = ["Maya Fitrianti, M.M.","Prof. Silvia Nst, M.Farm.",
+        "Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
+        return view('mhs.dosen')->with('dosen', $arrDosen);
+});
+
+Route::get('/galery', function () {
+    return view('mhs.galery');
+});

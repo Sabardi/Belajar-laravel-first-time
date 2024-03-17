@@ -14,14 +14,21 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="alert alert-warning alert-dismissible fad show">
+            @component('layout.alert')
+            <!-- <div class="alert alert-warning alert-dismissible fad show"> -->
                 100 data mahasiswa perlu di perbaiki
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
+            @endcomponent        
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
+            <!-- </div> -->
 
-            <div class="alert alert-danger alert-dismissible fade show">
+            <!-- <div class="alert alert-danger alert-dismissible fade show"> -->
+            @component('layout.alert')
+
                 hari ini deadline laporan perjalanan
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            
+            @endcomponent        
+                
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             </div>
         </div>
     </div>

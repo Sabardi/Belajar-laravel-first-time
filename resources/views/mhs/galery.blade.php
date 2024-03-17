@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <!-- mengirim data pada include -->
 @include('layout.navbar')
 
     <div class="container text-center mt-3 p-4 bg-white">

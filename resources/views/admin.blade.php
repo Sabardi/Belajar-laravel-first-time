@@ -19,6 +19,9 @@
                 @slot('class')
                     warning
                 @endslot
+                @slot('judul')
+                    Peringatan
+                @endslot
                 100 data mahasiswa perlu di perbaiki
             @endcomponent        
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
@@ -38,7 +41,16 @@
                 @endslot
             Bulan depan cuti panjang...
             @endcomponent  
-                
+            
+            {{-- @component('layout.alert')
+                @slot('class')
+                warning
+                @endslot
+                @slot('judul')
+                    Peringatan
+                @endslot
+                100 data mahasiswa perlu perbaikan
+            @endcomponent --}}
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             </div>
         </div>

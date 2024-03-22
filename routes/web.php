@@ -152,4 +152,6 @@ Route::get('/admin', function(){
 
 
 // belajar controller
-Route::get('/');
+Route::get('/dashboard', function(){
+    return view("dashboard");
+});

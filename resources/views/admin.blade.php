@@ -16,6 +16,9 @@
         <div class="col-12">
             @component('layout.alert')
             <!-- <div class="alert alert-warning alert-dismissible fad show"> -->
+                @slot('class')
+                    warning
+                @endslot
                 100 data mahasiswa perlu di perbaiki
             @endcomponent        
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
@@ -23,10 +26,18 @@
 
             <!-- <div class="alert alert-danger alert-dismissible fade show"> -->
             @component('layout.alert')
+                @slot('class')
+                    danger
+                @endslot
+                hari ini deadline laporan perjalanan dinas!
+            @endcomponent      
 
-                hari ini deadline laporan perjalanan
-            
-            @endcomponent        
+            @component('layout.alert')
+                @slot('class')
+                    success
+                @endslot
+            Bulan depan cuti panjang...
+            @endcomponent  
                 
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             </div>

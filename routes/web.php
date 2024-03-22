@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 route::get('/sabardi/{nama?}/{alamat?}', function($nama = "samsul",$alamat="bagu"){
     return "tampilkan data mahasiswa bernama dan $nama alamaat di $alamat";
 });
- 
+
 Route::get('/index', function() {
     return view('universitas.mahasiswa');
     // echo '<h2 style="text-align: center"><u>Welcome Sabardi</u></h2>';
@@ -31,7 +31,7 @@ Route::get('/index/{id}', function($id){
 
 // route redirect
 Route::get(('/hubungi-kami'), function(){
-    return "hallo selamat datang";  
+    return "hallo selamat datang";
 });
 Route::redirect('/contactus', '/hubungi-kami'); //akan melakukan redirect ke route hubungi kami
 
@@ -40,11 +40,11 @@ Route::prefix('/admin/')->group(function(){
     Route::get('/mahasiswa', function(){
         echo "<h1>Daftar Mahasiswa</h1>";
     });
-    
+
     Route::get('/dosen', function(){
         echo "<h1>Daftar Dosen</h1>";
     });
-    
+
     Route::get('/karyawan', function(){
         echo "<h1>Daftar Karyawan</h1>";
     });
@@ -71,10 +71,10 @@ Route::get('/buku/{c}', function($c){
 // mengirim data ke view
 Route::get('/mahasiswa', function () {
     // cara pertama
-    // di view nya di tambahin $arraymahasiswa pada li nya 
+    // di view nya di tambahin $arraymahasiswa pada li nya
     // return view('universitas.mahasiswa', ["mahasiswa" => "Sabardi"]);
     // cara kedua
-    // return view('universitas.mahasiswa', 
+    // return view('universitas.mahasiswa',
     // [
     //     "mahasiswa01" => "sabardi",
     //     "mahasiswa02" => "bambang",
@@ -90,7 +90,7 @@ Route::get('/mahasiswa', function () {
     // ];
     // return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
 
-    // opsi ke tiga 
+    // opsi ke tiga
     // menambahkan  ->width
     return view('universitas.mahasiswa')->with('mahasiswa01', 'Risa Lestari')->with('mahasiswa02', 'Rudi Hermawan')
     ->with('mahasiswa03', 'Bambang Kusumo');
@@ -102,7 +102,7 @@ Route::get('siswa', function(){
     $mahasiswa02 = "asep";
     $mahasiswa03 = "burhan";
     $mahasiswa04 = "ilham";
-    
+
     return view('universitas.mahasiswa', compact("mahasiswa01", "mahasiswa02", "mahasiswa03", "mahasiswa04"));
 });
 
@@ -149,3 +149,7 @@ Route::get('/galery', function () {
 Route::get('/admin', function(){
     return view('admin');
 });
+
+
+// belajar controller
+Route::get('/');

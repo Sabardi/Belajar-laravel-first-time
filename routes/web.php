@@ -1,157 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
-// Route::get('/hallo', function () {
-//     return view('welcome');
-// });
+// Cara mengakses controller di dalam folder
+use App\Http\Controllers\admin\AdminController;
+Route::get('/Dashboard',[App\Http\Controllers\DashboardController::class, 'index']);
+Route::get('/tester',[App\Http\Controllers\DashboardController::class, 'tester']);
+Route::get('/tampil',[App\Http\Controllers\DashboardController::class, 'tampil'])->name('Mahasiswa');
+Route::get('/dosen',[App\Http\Controllers\DashboardController::class, 'tampilDosen'])->name('Dosen');
+Route::get('/galery',[App\Http\Controllers\DashboardController::class, 'tampilGalery'])->name('Galery');
 
-// route parameter
-route::get('/sabardi/{nama?}/{alamat?}', function($nama = "samsul",$alamat="bagu"){
-    return "tampilkan data mahasiswa bernama dan $nama alamaat di $alamat";
-});
-
-Route::get('/index', function() {
-    return view('universitas.mahasiswa');
-    // echo '<h2 style="text-align: center"><u>Welcome Sabardi</u></h2>';
-});
-Route::get('/halo/mahasiswa', function() {
-    // return view('halo');
-    echo '<h2 style="text-align: center"><u>Welcome Sabardi</u></h2>';
-});
-Route::get('/halo/mahasiswa/sabardi', function() {
-    // return view('halo');
-    echo '<h2 style="text-align: center"><u>Welcome Sabardi</u></h2>';
-});
-
-// route parameter dengan reguler expression
-Route::get('/index/{id}', function($id){
-    return "id nya adalah $id";
-})->where('id', '[A-Z]{2}[0-9]+');
-
-// route redirect
-Route::get(('/hubungi-kami'), function(){
-    return "hallo selamat datang";
-});
-Route::redirect('/contactus', '/hubungi-kami'); //akan melakukan redirect ke route hubungi kami
-
-//route group
-Route::prefix('/admin/')->group(function(){
-    Route::get('/mahasiswa', function(){
-        echo "<h1>Daftar Mahasiswa</h1>";
-    });
-
-    Route::get('/dosen', function(){
-        echo "<h1>Daftar Dosen</h1>";
-    });
-
-    Route::get('/karyawan', function(){
-        echo "<h1>Daftar Karyawan</h1>";
-    });
-});
-
-// Route Fallback
-Route::fallback(function(){
-    return "Maaf, alamat tidak ditemukan";
-});
-
-//route priority
-Route::get('/buku/{a}', function($a){
-    return "buku ke-$a";
-});
-
-Route::get('/buku/{b}', function($b){
-    return "buku ke-$b";
-});
-
-Route::get('/buku/{c}', function($c){
-    return "buku ke-$c";
-});
-
-// mengirim data ke view
-Route::get('/mahasiswa', function () {
-    // cara pertama
-    // di view nya di tambahin $arraymahasiswa pada li nya
-    // return view('universitas.mahasiswa', ["mahasiswa" => "Sabardi"]);
-    // cara kedua
-    // return view('universitas.mahasiswa',
-    // [
-    //     "mahasiswa01" => "sabardi",
-    //     "mahasiswa02" => "bambang",
-    //     "mahasiswa03" => "ilham",
-    //     "mahasiswa04" => "burhan"
-    // ]);
-    // di view nya di panggil variable $mahasiswa [] dan index nya
-    // $arraymahasiswa = [
-    //     "sabardi",
-    //     "bambang",
-    //     "ilham",
-    //     "burhan"
-    // ];
-    // return view('universitas.mahasiswa', ["mahasiswa" => $arraymahasiswa]);
-
-    // opsi ke tiga
-    // menambahkan  ->width
-    return view('universitas.mahasiswa')->with('mahasiswa01', 'Risa Lestari')->with('mahasiswa02', 'Rudi Hermawan')
-    ->with('mahasiswa03', 'Bambang Kusumo');
-});
-
-// Mengenal Function compact()
-Route::get('siswa', function(){
-    $mahasiswa01 = "bardi";
-    $mahasiswa02 = "asep";
-    $mahasiswa03 = "burhan";
-    $mahasiswa04 = "ilham";
-
-    return view('universitas.mahasiswa', compact("mahasiswa01", "mahasiswa02", "mahasiswa03", "mahasiswa04"));
-});
-
-Route::get('/tugas/{nama}/{umur}/{kotaAsal}', function($nama, $umur, $kotaAsal){
-    return view('tugas.tugas')
-    ->with('nama',$nama)
-    ->with('umur', $umur)
-    ->with('kotaAsal', $kotaAsal);
-});
-
-Route::get('/tugasku', function(){
-        $arraymahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
-        "Lisa Permata"];
-    return view('tugas.tugas2', ["mahasiswa" => $arraymahasiswa]);
-
-});
-
-// kondisi if else
-
-Route::get('/percabangan', function(){
-    $nama = "sabardi";
-    $nilai = 10;
-
-    return view('percabangan.index', compact('nama','nilai'));
-});
-
-// Layoute
-Route::get('/mhs', function(){
-    $arraymahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
-        "Lisa Permata"];
-        return view('mhs.mhs')->with('mahsiswa', $arraymahasiswa);
-})->name('Mahasiswa');
-
-Route::get('/dosen', function(){
-    $arrDosen = ["Maya Fitrianti, M.M.","Prof. Silvia Nst, M.Farm.",
-        "Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
-        return view('mhs.dosen')->with('dosen', $arrDosen);
-})->name('Dosen');
-
-Route::get('/galery', function () {
-    return view('mhs.galery');
-})->name('gambar');
-
-Route::get('/admin', function(){
-    return view('admin');
-});
-
-
-// belajar controller
-Route::get('/dashboard', function(){
-    return view("dashboard");
-});
+// Cara mengakses controller di dalam folder
+Route::get('/adminIndex',[App\Http\Controllers\admin\AdminController::class, 'tampil'])->name('Mahasiswa');
+Route::get('/adminDosen',[App\Http\Controllers\admin\AdminController::class, 'tampilDosen'])->name('Dosen');
+Route::get('/adminGalery',[App\Http\Controllers\admin\AdminController::class, 'tampilGalery'])->name('Galery');

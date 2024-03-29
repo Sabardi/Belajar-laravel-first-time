@@ -17,11 +17,21 @@
                 <li class="nav-item">
                     <a class="nav-link @yield('menuMahasiswa')"  href="{{route('Mahasiswa')}}">Data Mahasiswa</a>
                 </li>
+
+                {{-- <li class="nav-item">
+                    <a class="nav-link @yield('menuDosen')" href="{{route('Dosen')}}">Data Dosen</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link @yield('menuGalery')" href="{{route('gambar')}}">Galery</a>
+                </li> --}}
+
                 <li class="nav-item">
                     <a class="nav-link @yield('menuDosen')" href="{{route('Dosen')}}">Data Dosen</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link @yield('menuGalery')" href="{{route('gambar')}}">Galery</a>
+                    <a class="nav-link @yield('menuGalery')" href="{{route('Galery')}}">Galery</a>
                 </li>
             </ul>
         </div>

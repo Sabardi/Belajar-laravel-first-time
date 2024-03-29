@@ -39,3 +39,5 @@ class ColectionController extends Controller
 
     }
 }
+
+12.4. Collection Method 
